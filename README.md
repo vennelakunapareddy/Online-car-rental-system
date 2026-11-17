@@ -1,13 +1,3 @@
-# Online Car Rental System
-**Course:** 24CS208 – Web Technologies  
-**Institution:** Siddhartha Academy of Higher Education, Velagapudi Ramakrishna Siddhartha School of Engineering  
-**Team Members:**
-- 24EU04097
-- 24EU04101
-- 24EU04111
-
----
-
 ## 📌 Project Overview
 The **Online Car Rental System** is a dynamic, full-stack web application designed for renting premium vehicles. Built with HTML5, CSS3, JavaScript, PHP, and MySQL/File-based storage, the system demonstrates key web development concepts including:
 - **Client-Server Architecture:** Seamless interaction between frontend user interfaces and backend PHP services.
@@ -73,15 +63,7 @@ car_rental/
 
 ---
 
-## 🔑 Default Credentials
-
-| Username | Password | Role / Type |
-| :--- | :--- | :--- |
-| `admin` | `1234` | Hardcoded Admin Account |
-| `srihitha` | `1234` | Registered User (File + DB) |
-| `p.srihitha` | `1234` | Registered User (File + DB) |
-
-*You can also click **Register Account** on the home page or login page to create any new user account. It automatically works with both MySQL and file-based fallback.*
+ click **Register Account** on the home page or login page to create any new user account. It automatically works with both MySQL and file-based fallback.*
 
 ---
 
