@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental - Welcome</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #bdc3c7;
+        }
+        .content {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .info-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            max-width: 550px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+        }
+        .info-box h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 20px 0;
+            list-style-type: disc;
+        }
+        li {
+            padding: 8px 0;
+            font-size: 1.1em;
+            color: #444;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #1abc9c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #16a085;
+        }
+        .btn-secondary {
+            background: #3498db;
+        }
+        .btn-secondary:hover {
+            background: #2980b9;
+        }
+        .button-group {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function setCookie(name, value) {
+            document.cookie = name + "=" + value;
+        }
+
+        function getCookie(name) {
+            var cookies = document.cookie.split(";");
+            for (var i = 0; i < cookies.length; i++) {
+                var c = cookies[i].trim();
+                if (c.indexOf(name + "=") == 0) {
+                    return c.substring(name.length + 1);
+                }
+            }
+            return "";
+        }
+
+        function showCategories() {
+            var categories = ["Luxury", "SUV", "Economy", "Sports"];
+            var msg = "Categories:\n";
+            for (var i = 0; i < categories.length; i++) {
+                msg = msg + categories[i] + "\n";
+            }
+            console.log(msg);
+        }
+
+        function chooseCategory() {
+            var choice = prompt("Enter 1-Luxury, 2-SUV, 3-Economy, 4-Sports");
+            switch (choice) {
+                case "1":
+                    alert("Luxury selected");
+                    break;
+                case "2":
+                    alert("SUV selected");
+                    break;
+                case "3":
+                    alert("Economy selected");
+                    break;
+                case "4":
+                    alert("Sports selected");
+                    break;
+                default:
+                    alert("Invalid choice");
+            }
+        }
+
+        function feedbackLoop() {
+            var input;
+            while (true) {
+                input = prompt("Enter feedback (type exit to stop)");
+                if (input === null || input.toLowerCase() === "exit") {
+                    break;
+                }
+                alert("You said: " + input);
+            }
+        }
+
+        window.onload = function () {
+            showCategories();
+            // Store visit timestamp cookie
+            setCookie("last_visit", new Date().toISOString());
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Premium Car Rental</h1>
+        <p>Professional vehicles for every journey.</p>
+    </header>
+
+    <div class="content">
+        <div class="info-box">
+            <h2>Our Rental Categories</h2>
+            <ul>
+                <li><strong>Luxury Sedans</strong> - High-end comfort for business trips</li>
+                <li><strong>SUV & Off-road</strong> - Spacious vehicles for family adventures</li>
+                <li><strong>Economy Cars</strong> - Fuel-efficient options for city driving</li>
+                <li><strong>Sports Collection</strong> - Performance cars for a thrilling drive</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <h2>Ready to book?</h2>
+            <p>Login to your account to view our full fleet and rates.</p>
+            <div class="button-group">
+                <a href="login.php" class="btn">Login to Dashboard</a>
+                <a href="register.php" class="btn btn-secondary">Register Account</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
